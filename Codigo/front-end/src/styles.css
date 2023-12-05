@@ -1,0 +1,142 @@
+@import "~font-awesome/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&display=swap');
+
+:root {
+  --blue: #D6F8F7;
+  --blue-hover: #01C4CA;
+  --blue-active: #83EFF2;
+
+  --green: #F0FFF0;
+  --green-hover: #B8CFAC;
+  --green-active: #DAECD1;
+
+  --pink: #EFB8DC;
+  --pink-hover: #B6207C;
+  --pink-active: #D683B6;
+
+  --black: #000000;
+
+  --input-background: #F2F4FF;
+
+  --title-text: #01C4CA;
+
+  --header-height: 76px;
+
+  --bg-1: "../assets/img/bg/colorbg1.jpg"
+}
+
+.title {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  color: var(--title-text);
+}
+
+.text {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+.only-printable {
+  display: none;
+}
+
+/* Estilização padrão das listas */
+
+.list-container {
+  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, rgb(169, 241, 238), rgba(255, 255, 255, 0.6));
+  border-radius: 16px;
+  /* border: 1px solid rgba(255, 255, 255, 0.12); */
+  border-left: 0px solid rgba(255, 255, 255, 0.05);
+  border-top: 0px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 8px 24px 0 rgba(0, 0, 0, 0.10);
+  padding-bottom: 1rem;
+}
+
+.table-responsive {
+  border: 1px solid #8898aa4d;
+  border-radius: 10px;
+}
+
+.text-muted {
+  color: #8898aa !important;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-upload {
+  border: solid 1px #0d6efd;
+  margin-right: 0.5em;
+  color: #0d6efd;
+}
+
+.btn-upload:hover {
+  color: white;
+  background-color: #0d6efd;
+  border: solid 1px #0d6efd;
+}
+
+.btn-circle {
+  border-radius: 50%;
+  border: solid 1px #0d6efd;
+  margin-right: 0.5em;
+  color: #0d6efd;
+}
+
+.btn-circle:hover {
+  color: white;
+  background-color: #0d6efd;
+  border: solid 1px #0d6efd;
+}
+
+
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    font-size: 13px;
+  }
+
+  .list-container {
+  background: rgb(0, 0, 0, 0);
+  }
+
+  body, app-btn-custom, .not-printable {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .not-printable {
+    display: none;
+  }
+
+  .only-printable {
+    display: block;
+  }
+
+  .printable {
+    visibility: visible;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+}
+
